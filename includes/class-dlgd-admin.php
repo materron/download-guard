@@ -231,15 +231,16 @@ final class DLGD_Admin {
 								<?php esc_html_e( 'Detect accounts that download too much too fast', 'download-guard' ); ?>
 							</label>
 							<p>
-								<?php
-								printf(
-									/* translators: 1: number input, 2: number input. */
-									esc_html__( 'More than %1$s downloads within %2$s minutes.', 'download-guard' ),
-									'<input type="number" min="1" step="1" class="small-text" aria-label="' . esc_attr__( 'Downloads', 'download-guard' ) . '" name="' . esc_attr( $option ) . '[burst][count]" value="' . esc_attr( $settings['burst']['count'] ) . '">',
-									'<input type="number" min="1" max="1440" step="1" class="small-text" aria-label="' . esc_attr__( 'Minutes', 'download-guard' ) . '" name="' . esc_attr( $option ) . '[burst][minutes]" value="' . esc_attr( $settings['burst']['minutes'] ) . '">'
-								);
-								?>
+								<label for="dlgd-burst-count"><?php esc_html_e( 'Downloads', 'download-guard' ); ?></label>
+								<input type="number" min="1" step="1" class="small-text" id="dlgd-burst-count"
+									name="<?php echo esc_attr( $option ); ?>[burst][count]"
+									value="<?php echo esc_attr( $settings['burst']['count'] ); ?>">
+								<label for="dlgd-burst-minutes"><?php esc_html_e( 'Minutes', 'download-guard' ); ?></label>
+								<input type="number" min="1" max="1440" step="1" class="small-text" id="dlgd-burst-minutes"
+									name="<?php echo esc_attr( $option ); ?>[burst][minutes]"
+									value="<?php echo esc_attr( $settings['burst']['minutes'] ); ?>">
 							</p>
+							<p class="description"><?php esc_html_e( 'More than this number of downloads within this many minutes counts as bulk downloading.', 'download-guard' ); ?></p>
 						</td>
 					</tr>
 					<tr>

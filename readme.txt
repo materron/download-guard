@@ -47,7 +47,18 @@ Downloads are read from the download plugin's own log, so no extra table is crea
 
 This plugin is not affiliated with or endorsed by the Download Monitor, Easy Digital Downloads or WooCommerce teams.
 
+= Privacy =
+
+Download Guard does not send data to any external service and does not track anyone. It reads the download logs that Download Monitor, Easy Digital Downloads and WooCommerce already keep, and stores only its settings and, for blocked accounts, when and why they were blocked (in the user's meta data).
+
+Bulk-download alerts are emailed from your site to the address you choose, with the account's username and email address.
+
+The optional sign-up check "Email domains that cannot receive mail" makes a DNS lookup of the email address's domain through your server's DNS resolver. No other data is sent. You can turn it off in the settings.
+
 = Developers =
+
+Development happens on GitHub: [github.com/materron/download-guard](https://github.com/materron/download-guard).
+
 
 Filters:
 
