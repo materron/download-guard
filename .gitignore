@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts / packaged releases
+*.zip
+
+# Editor
+.idea/
+.vscode/
